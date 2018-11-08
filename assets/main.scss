@@ -1,4 +1,4 @@
-$beige: #FDF7ED;
+$beige: #F8F5EB;
 $main: #DA6259;
 $text: #6A6964;
 
@@ -10,8 +10,6 @@ html {
 }
 
 html {
-  font-family: freight-text-pro, serif;
-  font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -20,58 +18,32 @@ html {
   box-sizing: border-box;
 }
 
-
-
-
 body {
   // background-color: yellow;
   font-size: 16px;
   background-color: $beige;
   color: $text;
+  font-family: freight-text-pro, serif;
 }
 
-h1, h2, h3, h4 {
-  font-family: freight-display-pro, serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: $main;
-}
-
-.page-enter-active, .page-leave-active {
-  transition: all .5s;
-}
-.page-enter, .page-leave-active {
-  opacity: 0;
-  transform: scale(0);
-}
+@import 'typography';
+@import 'transitions';
 
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 868px;
+  margin: 10vw auto;
+}
+nav {
+  flex: 1 1 33.333%;
+  order: 2;
+  font-size: 1.75em;
+}
+.content {
+  flex: 1 1 66.666%;
+  order: 1;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}

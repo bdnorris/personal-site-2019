@@ -1,10 +1,7 @@
 <template>
   <section class="container">
-    <div>
-      <logo/>
-
-      <nuxt-link to="/projects">Projects</nuxt-link>
-
+    <navigation />
+    <div class="content">
       <h1 class="title">
         Brian Norris
       </h1>
@@ -22,11 +19,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import navigation from '~/components/navigation.vue'
 
 export default {
   components: {
-    Logo
+    navigation
   }
 }
 </script>
