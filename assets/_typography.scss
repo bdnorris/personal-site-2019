@@ -5,6 +5,9 @@ h1, h2, h3, h4 {
 
 h1, h2, h3, h4, h5, h6 {
   color: $main;
+  &.secondary-page {
+    color: $beige;
+  }
 }
 
 h1 {
@@ -31,4 +34,10 @@ p {
 
 nav a {
   font-family: freight-display-pro, serif;
+  color: $second;
+  text-decoration: none;
+  margin-left: 0.5em;
+  &.secondary-page {
+    color: $beige;
+  }
 }

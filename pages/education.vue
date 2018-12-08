@@ -3,7 +3,7 @@
     <Navigation :current="this.$route.name" />
     <div class="content">
       <h1 class="title">
-        Projects
+        Education
       </h1>
       <h2 class="subtitle">
         Web Designer/Developer
@@ -28,6 +28,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  @import '../assets/variables.scss';
+<style>
+
+
 </style>

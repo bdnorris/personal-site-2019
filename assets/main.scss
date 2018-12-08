@@ -1,6 +1,4 @@
-$beige: #F8F5EB;
-$main: #DA6259;
-$text: #6A6964;
+@import 'variables';
 
 html {
   box-sizing: border-box;
@@ -24,7 +22,13 @@ body {
   background-color: $beige;
   color: $text;
   font-family: freight-text-pro, serif;
+  
+  &.secondary-page {
+    background-color: $main;
+    color: $beige;
+  }
 }
+
 
 @import 'typography';
 @import 'transitions';
@@ -38,12 +42,12 @@ body {
   margin: 10vw auto;
 }
 nav {
-  flex: 1 1 33.333%;
+  flex: 0 1 30%;
   order: 2;
   font-size: 1.75em;
 }
 .content {
-  flex: 1 1 66.666%;
+  flex: 0 1 60%;
   order: 1;
 }
 

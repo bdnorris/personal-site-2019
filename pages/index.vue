@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <navigation />
+    <Navigation :current="this.$route.name" />
     <div class="content">
       <h1 class="title">
         Brian Norris
@@ -19,13 +19,17 @@
 </template>
 
 <script>
-import navigation from '~/components/navigation.vue'
+import Navigation from '~/components/Navigation.vue'
 
 export default {
   components: {
-    navigation
+    Navigation
+  },
+  created: function() {
+    // console.log('router',this.$route)
   }
 }
+
 </script>
 
 <style>
