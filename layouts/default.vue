@@ -5,3 +5,11 @@
 </template>
 
 
+<script>
+export default {
+  name: 'Default',
+  created: function() {
+    this.$nuxt.$loading = true
+  }
+}
+</script>

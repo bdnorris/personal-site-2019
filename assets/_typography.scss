@@ -5,7 +5,7 @@ h1, h2, h3, h4 {
 
 h1, h2, h3, h4, h5, h6 {
   color: $main;
-  &.secondary-page {
+  .secondary-page & {
     color: $beige;
   }
 }
@@ -22,6 +22,9 @@ h2 {
   font-size: 2.3125em;
   line-height: 1;
   color: desaturate(darken($beige, 25%), 30%);
+  .secondary-page & {
+    color: desaturate(darken($beige, 25%), 30%);
+  }
 }
 
 p {
@@ -37,7 +40,7 @@ nav a {
   color: $second;
   text-decoration: none;
   margin-left: 0.5em;
-  &.secondary-page {
+  .secondary-page & {
     color: $beige;
   }
 }

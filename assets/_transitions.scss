@@ -1,8 +1,10 @@
 .page-enter-active, .page-leave-active {
   transition: all .5s;
+  transform-origin: center center;
   // transform: scale(1);
 }
 .page-enter, .page-leave-active {
   opacity: 0;
-  // transform: translateX(20vw);
+  transform: scale(0.8);
+  // translateX(6em)
 }

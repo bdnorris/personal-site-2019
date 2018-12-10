@@ -1,29 +1,34 @@
 <template>
-  <section class="container">
-    <Navigation :current="this.$route.name" />
-    <div class="content">
-      <h1 class="title">
-        Brian Norris
-      </h1>
-      <h2 class="subtitle">
-        Web Designer/Developer
-      </h2>
-      <p>
-        Hi, I’m Brian Norris. I have 16 years experience working for advertising and media agencies as a graphic designer and web developer. I’m currently a Web Developer at The Marlin Network in Southwest Missouri and instruct Web Design courses for design majors at Missouri State University.
-      </p>
-      <p>
-        I work with graphic designers, engineers, copywriters and user experience designers to deliver functional user experiences on the web. Find me through the various channels below, or take a look at some of my educational resources or my extra-curricular projects.
-      </p>
-    </div>
-  </section>
+  <div>
+    <section class="container">
+      <Navigation :current="this.$route.name" />
+      <div class="content">
+        <h1 class="title">
+          Brian Norris
+        </h1>
+        <h2 class="subtitle">
+          Web Designer/Developer
+        </h2>
+        <p>
+          Hi, I’m Brian Norris. I have 16 years experience working for advertising and media agencies as a graphic designer and web developer. I’m currently a Web Developer at The Marlin Network in Southwest Missouri and instruct Web Design courses for design majors at Missouri State University.
+        </p>
+        <p>
+          I work with graphic designers, engineers, copywriters and user experience designers to deliver functional user experiences on the web. Find me through the various channels below, or take a look at some of my educational resources or my extra-curricular projects.
+        </p>
+      </div>
+    </section>
+    <Footer />
+  </div>
 </template>
 
 <script>
 import Navigation from '~/components/Navigation.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Navigation
+    Navigation,
+    Footer
   },
   created: function() {
     // console.log('router',this.$route)
@@ -32,7 +37,11 @@ export default {
 
 </script>
 
-<style>
+<style scoped lang="scss">
+  @import '../assets/variables.scss';
 
+  // :root {
+  //   background-color: transparent;
+  // }
 
 </style>

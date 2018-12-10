@@ -22,6 +22,9 @@ body {
   background-color: $beige;
   color: $text;
   font-family: freight-text-pro, serif;
+  transition: background-color 500ms ease;
+
+  overflow-x: hidden;
   
   &.secondary-page {
     background-color: $main;
