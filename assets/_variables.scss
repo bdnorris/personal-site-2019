@@ -2,3 +2,26 @@ $beige: #F8F5EB;
 $main: #DA6259;
 $second: #3B516B;
 $text: #6A6964;
+
+@mixin underline-transition {
+    position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $second;
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    transition: transform 300ms ease;
+    transform: scale(0);
+    transform-origin: left center;
+  }
+  &:hover {
+    &::after {
+      transform: scale(1);
+    }
+  }
+}

@@ -19,7 +19,7 @@ export default {
   components: {
     Navigation
   },
-  created: function() {
+  mounted: function() {
     document.querySelector('body').classList.add('secondary-page')
   },
   destroyed: function() {
