@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <Navigation :current="this.$route.name" />
+    <Navigation
+      :current="this.$route.name" 
+    />
     <div class="content">
       <h1 class="title">
         Projects
@@ -11,24 +13,40 @@
       <nav>
         <button 
           type="button" 
-          @click="loadPanel('balls')">Paper Balls</button>
+          @click="loadPanel('balls')"
+        >
+          Paper Balls
+        </button>
         <button 
           type="button" 
-          @click="loadPanel('scroll')">Scroll Detection</button>
+          @click="loadPanel('scroll')"
+        >
+          Scroll Detection
+        </button>
         <button 
           type="button" 
-          @click="loadPanel('haiku')">Haiku Generator</button>
+          @click="loadPanel('haiku')"
+        >
+          Haiku Generator
+        </button>
         <button 
           type="button" 
-          @click="loadPanel('grid')">Grid Experiments</button>
+          @click="loadPanel('grid')"
+        >
+          Grid Experiments
+        </button>
         <button 
           type="button" 
-          @click="loadPanel('uilib')">UI Library</button>
+          @click="loadPanel('uilib')"
+        >
+          UI Library
+        </button>
       </nav>
     </div>
     <Panel 
       v-if="panelTitle.open" 
-      :panel-title="panelTitle.title" />
+      :panel-title="panelTitle.title" 
+    />
   </section>
 </template>
 
