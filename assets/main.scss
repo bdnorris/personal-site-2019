@@ -32,25 +32,6 @@ body {
   }
 }
 
-
 @import 'typography';
 @import 'transitions';
-
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  max-width: 868px;
-  margin: 10vw auto;
-}
-nav {
-  flex: 0 1 30%;
-  order: 2;
-  font-size: 1.75em;
-}
-.content {
-  flex: 0 1 60%;
-  order: 1;
-}
-
+@import 'structure';

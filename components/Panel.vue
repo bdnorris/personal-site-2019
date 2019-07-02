@@ -24,10 +24,11 @@ export default {
 
 article {
   background-color: $second;
-  position: fixed;
-  top: 6em;
-  right: 6em;
-  bottom: 6em;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
 }
 
 </style>

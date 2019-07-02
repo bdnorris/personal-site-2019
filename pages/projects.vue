@@ -1,16 +1,20 @@
 <template>
-  <section class="container">
-    <Navigation
-      :current="this.$route.name" 
-    />
-    <div class="content">
-      <h1 class="title">
-        Projects
-      </h1>
-      <h2 class="subtitle">
-        Experiments and...
-      </h2>
-      <nav>
+  <div>
+    <section class="container">
+      <Navigation
+        :current="this.$route.name" 
+      />
+      <div class="content">
+        <h1 class="title">
+          Projects
+        </h1>
+        <h2 class="subtitle">
+          Experiments and...
+        </h2>
+      </div>
+    </section>
+    <section class="container">
+      <nav class="projects">
         <button 
           type="button" 
           @click="loadPanel('balls')"
@@ -42,12 +46,14 @@
           UI Library
         </button>
       </nav>
-    </div>
-    <Panel 
-      v-if="panelTitle.open" 
-      :panel-title="panelTitle.title" 
-    />
-  </section>
+      <transition name="panel">
+        <Panel 
+          v-if="panelTitle.open"
+          :panel-title="panelTitle.title"
+        />
+      </transition>
+    </section>
+  </div>
 </template>
 
 <script>
