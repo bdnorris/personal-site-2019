@@ -1,10 +1,10 @@
 <template>
   <div>
-    <section class="container">
+    <header class="container banner">
       <Navigation
         :current="this.$route.name" 
       />
-      <div class="content">
+      <div class="">
         <h1 class="title">
           Projects
         </h1>
@@ -12,8 +12,8 @@
           Experiments and...
         </h2>
       </div>
-    </section>
-    <section class="container">
+    </header>
+    <main class="container content">
       <nav class="projects">
         <button 
           type="button" 
@@ -52,7 +52,7 @@
           :panel-title="panelTitle.title"
         />
       </transition>
-    </section>
+    </main>
   </div>
 </template>
 
@@ -107,7 +107,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '../assets/variables.scss';
+  @import '../../assets/variables.scss';
 
   :root {
     background-color: $main;

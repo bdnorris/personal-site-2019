@@ -1,15 +1,15 @@
 <template>
-  <section class="container">
+  <header class="container banner">
     <Navigation :current="this.$route.name" />
-    <div class="content">
+    <main class="">
       <h1 class="title">
         Education
       </h1>
       <h2 class="subtitle">
         Web Designer/Developer
       </h2>
-    </div>
-  </section>
+    </main>
+  </header>
 </template>
 
 <script>
@@ -29,6 +29,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '../assets/variables.scss';
+  @import '../../assets/variables.scss';
 
 </style>

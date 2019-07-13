@@ -45,8 +45,7 @@ export default {
 @import '../assets/variables.scss';
 
 a {
- @include underline-transition;
+  @include underline-transition;
 }
 
 </style>
-
