@@ -1,0 +1,211 @@
+@mixin button-reset {
+  background-image: none;
+  background-color: transparent;
+  border-radius: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+
+@mixin list-item {
+  color: $black-60;  
+  position: relative;
+  padding-top: 0.5em;
+}
+@mixin list-item-before {
+  content: "•";
+  font-size: 1em;
+  position: absolute;
+  top: 0.5em;
+  left: -0.75em;
+  // transform: translateX(-1.5em);
+  // padding-top: 0.35em;
+}
+
+
+@mixin columns($columns, $gutter) {
+  box-sizing: border-box; // just to be sure
+  $num-gutters: $columns - 1; // the number of gutters is one less than the number of columns
+  // loop through 1 - columns and reset nth childs to fix media query cascade issues
+  @for $i from 1 through $columns {
+    &:nth-child(#{$i}n) {
+      margin-right: calc(#{$gutter} - 1px); // -1px for IE rounding issues
+    }
+  }
+  $gutter-size-col-reduce: $gutter*$num-gutters/$columns; // this finds the amount you have to reduce each column width by by taking the gutter, multiplying that by how many gutters you have and then dividing by how many columns you have
+  flex-grow: 0;
+  flex-shrink: 0;
+  // BTW, I always use width as a backup for flex-basis because IE doesn't like calc on flex-basis
+  flex-basis: calc(#{100/$columns}% - #{$gutter-size-col-reduce} - 1px);
+  /* BTW, I always use width as a backup for flex-basis because IE doesn't like calc on flex-basis */
+  width: calc(#{100/$columns}% - #{$gutter-size-col-reduce} - 1px);
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    width: calc(#{100/$columns}% - #{$gutter-size-col-reduce} - 2px);
+    flex-basis: calc(#{100/$columns}% - #{$gutter-size-col-reduce} - 2px);
+  }
+  margin-right: $gutter; // all items get a gutter margin on the right
+  margin-left: 0;
+  &:nth-child(#{$columns}n) {
+    margin-right: 0; // then we take that margin away from the last column in the row
+  }
+
+  // protect from items inside being too large and breaking the grid
+  overflow: hidden;
+}
+
+
+@mixin default-sizing($max) {
+  margin-left: $mobile-margin;
+  margin-right: $mobile-margin;
+  max-width: $max;
+  @include breakpoint(large) {
+    margin-left: $desktop-margin;
+    margin-right: $desktop-margin;
+  }
+  @include breakpoint ($max up) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $desktop-margin;
+    padding-right: $desktop-margin;
+  }
+}
+
+@mixin font-outline($stroke, $fill, $default, $width) {
+  color: $default;
+  @supports 
+  ((-webkit-text-stroke-color: $stroke)
+  and
+  (-webkit-text-fill-color: $fill))
+  or
+  ((-moz-text-stroke-color: $stroke)
+  and
+  (-moz-text-fill-color: $fill)) {
+    text-stroke: $width $stroke;
+    -webkit-text-stroke: $width $stroke;
+    -webkit-text-fill-color: $fill;
+    -moz-text-stroke: $width $gray1;
+    -moz-text-fill-color: $fill;
+  }
+  // paint-order: stroke fill;
+}
+
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+
+// https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms/
+@mixin angle($pseudo, $flip: false, $angle: 1.5deg, $bginherit: false) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: map-get($z, 1);
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background-color: inherit;
+      @if $bginherit {
+        background: inherit;
+      }
+      content: '';
+      display: block;
+      height: 5vw;
+      left: 0;
+      position: absolute;
+      right: 0;
+      // z-index: -1;
+      // transform: translateZ(-100px);
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin underline-transition {
+    position: relative;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $second;
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    transition: transform 300ms ease;
+    transform: scale(0);
+    transform-origin: left center;
+  }
+  &:hover {
+    &::after {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,7 +1,6 @@
 .container {
   position: relative;
-  max-width: 868px;
-  margin: 0 auto;
+  @include default-sizing(868px);
 }
 
 .banner {
