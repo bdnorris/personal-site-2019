@@ -2,7 +2,8 @@
   <div>
     <header class="container banner">
       <Navigation
-        :current="this.$route.name" 
+        class="header-navigation"
+        :current="this.$route.name"
       />
       <div class="">
         <h1 class="title">
@@ -53,6 +54,10 @@
         />
       </transition>
     </main>
+    <Navigation
+      class="footer-navigation"
+      :current="this.$route.name"
+    />
   </div>
 </template>
 

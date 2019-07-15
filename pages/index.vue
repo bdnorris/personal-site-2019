@@ -1,7 +1,10 @@
 <template>
   <div>
     <header class="container banner">
-      <Navigation :current="this.$route.name" />
+      <Navigation
+        class="header-navigation"
+        :current="this.$route.name"
+      />
       <div class="">
         <h1 class="title">
           Brian Norris
@@ -19,7 +22,11 @@
         I work with graphic designers, engineers, copywriters and user experience designers to deliver functional user experiences on the web. Find me through the various channels below, or take a look at some of my educational resources or my extra-curricular projects.
       </p>
     </main>
-    <Footer />
+    <!-- <Footer /> -->
+    <Navigation
+      class="footer-navigation"
+      :current="this.$route.name"
+    />
   </div>
 </template>
 
@@ -30,7 +37,7 @@ import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Navigation,
-    Footer
+    // Footer
   },
   created: function() {
     // console.log('router',this.$route)

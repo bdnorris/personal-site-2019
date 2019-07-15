@@ -4,10 +4,13 @@
 }
 
 .banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 25vh;
+  padding-top: 2em;
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  // height: 25vh;
 }
 
 .content {
@@ -17,21 +20,12 @@
   height: 75vh;
 }
 
-nav {
-  flex: 0 1 30%;
-  order: 2;
-  font-size: 1.75em;
-}
-
 article {
   flex: 1 1 70%;
   height: 100%;
 }
 
-nav.projects {
-  flex: 0 1 30%;
-  order: 0;
-}
+
 
 .content {
   flex: 0 1 60%;
