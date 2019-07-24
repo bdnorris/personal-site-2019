@@ -51,6 +51,7 @@
         <Panel 
           v-if="panelTitle.open"
           :panel-title="panelTitle.title"
+          @closed="closePanel"
         />
       </transition>
     </main>
@@ -85,6 +86,11 @@ export default {
     document.querySelector('body').classList.remove('secondary-page')
   },
   methods: {
+    closePanel: function () {
+      console.log('close')
+      this.panelTitle.open = false
+      this.panelTitle.title = ''
+    },
     loadPanel: function (title) {
       switch(title) {
         case 'balls':
