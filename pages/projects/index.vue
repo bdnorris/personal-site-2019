@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="site-wrapper">
     <header class="container banner">
       <Navigation
         class="header-navigation"
