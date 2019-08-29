@@ -119,9 +119,14 @@ export default {
 
 <style scoped lang="scss">
   @import '../../assets/variables.scss';
+  @import '../../assets/mixins.scss';
 
   :root {
     background-color: $main;
+  }
+
+  button {
+    @include underline-transition;
   }
 
 </style>
