@@ -49,8 +49,9 @@
       </nav>
       <transition name="panel">
         <Panel 
-          v-if="panelTitle.open"
-          :panel-title="panelTitle.title"
+          v-if="panel.open"
+          :panel-title="panel.title"
+          :panel-slug="panel.slug"
           @closed="closePanel"
         />
       </transition>
@@ -73,8 +74,9 @@ export default {
   },
   data: function() {
     return {
-      panelTitle: {
+      panel: {
         title: '',
+        slug: '',
         open: false,
       }
     }
@@ -88,30 +90,32 @@ export default {
   methods: {
     closePanel: function () {
       console.log('close')
-      this.panelTitle.open = false
-      this.panelTitle.title = ''
+      this.panel.open = false
+      this.panel.title = ''
+      this.panel.slug = ''
     },
-    loadPanel: function (title) {
-      switch(title) {
+    loadPanel: function (slug) {
+      this.panel.slug = slug
+      switch(slug) {
         case 'balls':
-          this.panelTitle.title = "Paper Balls"
+          this.panel.title = "Paper Balls"
           break 
         case 'scroll':
-          this.panelTitle.title = "Scroll Detection"
+          this.panel.title = "Scroll Detection"
           break 
         case 'haiku':
-          this.panelTitle.title = "Haiku Generator"
+          this.panel.title = "Haiku Generator"
           break 
         case 'grid':
-          this.panelTitle.title = "Grid Experiments"
+          this.panel.title = "Grid Experiments"
           break 
         case 'uilib':
-          this.panelTitle.title = "UI Library"
+          this.panel.title = "UI Library"
           break 
         default:  
           console.error("Unrecognized Title")
       }
-      this.panelTitle.open = true
+      this.panel.open = true
     }
   }
 }

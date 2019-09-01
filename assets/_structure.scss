@@ -45,3 +45,10 @@ article {
   order: 1;
   position: relative;
 }
+
+main.container {
+  p {
+    padding-right: 30%;
+    // max-width: 32em;
+  }
+}
