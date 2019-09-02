@@ -25,6 +25,7 @@ nav.projects {
   display: none;
   @include breakpoint(large) {
     display: flex;
+    justify-content: flex-end;
   }
 }
 
