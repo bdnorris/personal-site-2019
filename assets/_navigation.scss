@@ -15,9 +15,7 @@ nav.projects {
     line-height: 1;
     font-weight: 600;
     margin-bottom: 0.5em;
-    &:hover {
-      border-bottom: 2px solid $beige;
-    }
+    @include underline-transition;
   }
 }
 

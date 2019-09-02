@@ -129,8 +129,6 @@ export default {
     background-color: $main;
   }
 
-  button {
-    @include underline-transition;
-  }
+
 
 </style>

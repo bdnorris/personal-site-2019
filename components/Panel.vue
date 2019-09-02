@@ -11,16 +11,20 @@
       <h2>
         {{ panelTitle }}
       </h2>
-      <template v-if="panelSlug === 'balls'">
-        <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. "Nose out, Ron, or I'll burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
-        <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
-        <ul>
-          <li>
-            <a href="#">Code Pen</a>
-            <a href="#">Project Page</a>
-          </li>
-        </ul>
-      </template>
+      <transition name="panel-contents">
+        <template v-if="panelSlug === 'balls'">
+          <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. "Nose out, Ron, or I'll burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
+          <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
+          <ul class="link-list">
+            <li>
+              <a href="#">Code Pen</a>
+            </li>
+            <li>
+              <a href="#">Project Page</a>
+            </li>
+          </ul>
+        </template>
+      </transition>
     </article>
   </div>
 </template>
@@ -76,6 +80,24 @@ export default {
     &:first-of-type {
       margin-top: 1.5em;
     }
+    a {
+      color: $main;
+      font-weight: 600;
+    }
+  }
+}
+
+ul.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  & > li {
+    font-size: 1.375em;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    a {
+      color: $second;
+    }
   }
 }
 
@@ -83,7 +105,20 @@ export default {
   @include button-reset;
   position: absolute;
   top: 2em;
-  right: 2em;  
+  right: 2em;
+  transform: scale(1);
+  transition: transform 200ms ease;
+  transform-origin: center center;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.panel-contents-enter-active, .panel-contents-leave-active {
+  transition: opacity .5s;
+}
+.panel-contents-enter, .panel-contents-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 </style>
