@@ -12,9 +12,9 @@
         {{ panelTitle }}
       </h2>
       <transition name="panel-contents">
-        <template v-if="panelSlug === 'balls'">
+        <div v-if="panelSlug === 'balls'">
           <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. "Nose out, Ron, or I'll burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
-          <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
+          <p>"George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
           <ul class="link-list">
             <li>
               <a href="#">Code Pen</a>
@@ -23,7 +23,7 @@
               <a href="#">Project Page</a>
             </li>
           </ul>
-        </template>
+        </div>
       </transition>
     </article>
   </div>
@@ -62,14 +62,21 @@ export default {
 
 @import '../assets/variables.scss';
 @import '../assets/mixins.scss';
+@import '../assets/vendor/index.scss';
 
 .panel {
   width: 100%;
   height: 100%;
   flex: 1 0 70%;
   background-color: $beige;
-  position: relative;
   padding: 1em 2.5em 2em 2em;
+  margin-top: 0.25em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
   h2 {
     color: $denim-light;
     font-size: 3em;
@@ -85,6 +92,9 @@ export default {
       font-weight: 600;
     }
   }
+  @include breakpoint(large) {
+    position: relative;
+  }
 }
 
 ul.link-list {
@@ -97,6 +107,19 @@ ul.link-list {
     margin-bottom: 0.25em;
     a {
       color: $second;
+      text-decoration: none;
+      // border-bottom: 2px solid $second;
+      @include underline-transition($main);
+      position: relative;
+      line-height: 1.2;
+      &::before {
+        content: '→';
+        display: inline-block;
+        font-family: "Lucida Grande", sans-serif;
+        position: absolute;
+        right: -1.25em;
+        top: 0.05em;
+      }
     }
   }
 }

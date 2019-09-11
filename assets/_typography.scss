@@ -46,13 +46,3 @@ p {
   //   margin-top: 2.75em;
   // }
 }
-
-nav a {
-  font-family: freight-display-pro, serif;
-  color: $second;
-  text-decoration: none;
-  margin-left: 0.5em;
-  .secondary-page & {
-    color: $beige;
-  }
-}
