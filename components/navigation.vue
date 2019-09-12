@@ -44,9 +44,18 @@ export default {
 
 @import '../assets/variables.scss';
 @import '../assets/mixins.scss';
+@import '../assets/vendor/index.scss';
 
-a {
-  @include underline-transition;
+@include breakpoint(large) {
+  a {
+    @include underline-transition($main);
+  }
+  
+  .secondary-page {
+    a {
+      @include underline-transition($second);
+    }
+  }
 }
 
 </style>

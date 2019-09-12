@@ -70,17 +70,18 @@ export default {
   flex: 1 0 70%;
   background-color: $beige;
   padding: 1em 2.5em 2em 2em;
-  margin-top: 0.25em;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 2;
+  overflow-y: scroll;
   h2 {
     color: $denim-light;
     font-size: 3em;
     line-height: 1;
+    padding-right: 0.75em; // keep away from X
   }
   p {
     color: $text;
@@ -94,6 +95,7 @@ export default {
   }
   @include breakpoint(large) {
     position: relative;
+    margin-top: 0.25em;
   }
 }
 

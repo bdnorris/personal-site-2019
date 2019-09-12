@@ -31,11 +31,16 @@
   // height: 75vh;
   width: 100%;
   flex: 1 1 70vh;
+
 }
 
 article {
   flex: 1 1 70%;
   // height: 100%;
+  padding-bottom: 8em;
+  @include breakpoint(large) {
+    padding-bottom: 2em;
+  }
 }
 
 
@@ -47,11 +52,19 @@ article {
 }
 
 main.container {
+  padding-bottom: 6em;
+  @include breakpoint(large) {
+    padding-bottom: 2em;
+  }
+
   & > p {
-    padding-right: 30%;
     // max-width: 32em;
-    &:first-of-type {
-      margin-top: 2.75em;
+
+    @include breakpoint(large) {
+      padding-right: 30%;
+      &:first-of-type {
+        margin-top: 2.75em;
+      }
     }
   }
 }
