@@ -52,10 +52,6 @@ article {
 }
 
 main.container {
-  padding-bottom: 6em;
-  @include breakpoint(large) {
-    padding-bottom: 2em;
-  }
 
   & > p {
     // max-width: 32em;
@@ -66,5 +62,12 @@ main.container {
         margin-top: 2.75em;
       }
     }
+  }
+}
+
+main.container--home {
+  padding-bottom: 6em;
+  @include breakpoint(large) {
+    padding-bottom: 2em;
   }
 }

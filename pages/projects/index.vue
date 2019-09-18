@@ -20,7 +20,7 @@
           type="button" 
           @click="loadPanel('balls')"
         >
-          Paper Balls
+          Pugsley
         </button>
         <button 
           type="button" 
@@ -45,6 +45,12 @@
           @click="loadPanel('uilib')"
         >
           UI Library
+        </button>
+        <button 
+          type="button" 
+          @click="loadPanel('colophon')"
+        >
+          Colophon
         </button>
       </nav>
       <transition name="panel">
@@ -126,7 +132,7 @@ export default {
   @import '../../assets/mixins.scss';
 
   :root {
-    background-color: $main;
+    background-color: $primary;
   }
 
 

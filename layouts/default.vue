@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="top-decoration" />
     <nuxt />
   </div>
 </template>
@@ -15,3 +16,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+@import '../assets/variables.scss';
+@import '../assets/mixins.scss';
+@import '../assets/vendor/index.scss';
+
+
+.top-decoration {
+  height: 18px;
+  width: 100%;
+  background-color: $second;
+}
+</style>

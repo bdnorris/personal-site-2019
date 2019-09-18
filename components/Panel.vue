@@ -89,7 +89,7 @@ export default {
       margin-top: 1.5em;
     }
     a {
-      color: $main;
+      color: $primary;
       font-weight: 600;
     }
   }
@@ -111,7 +111,7 @@ ul.link-list {
       color: $second;
       text-decoration: none;
       // border-bottom: 2px solid $second;
-      @include underline-transition($main);
+      @include underline-transition($primary);
       position: relative;
       line-height: 1.2;
       &::before {
