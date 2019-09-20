@@ -18,7 +18,7 @@
       <nav class="projects">
         <button 
           type="button" 
-          @click="loadPanel('balls')"
+          @click="loadPanel('pugsley')"
         >
           Pugsley
         </button>
@@ -45,6 +45,12 @@
           @click="loadPanel('uilib')"
         >
           UI Library
+        </button>
+        <button
+          type="button"
+          @click="loadPanel('heuristics')"
+        >
+          Usability Heuristics
         </button>
         <button 
           type="button" 
@@ -103,8 +109,8 @@ export default {
     loadPanel: function (slug) {
       this.panel.slug = slug
       switch(slug) {
-        case 'balls':
-          this.panel.title = "Paper Balls"
+        case 'pugsley':
+          this.panel.title = "Pugsley"
           break 
         case 'scroll':
           this.panel.title = "Scroll Detection"
@@ -117,6 +123,9 @@ export default {
           break 
         case 'uilib':
           this.panel.title = "UI Library"
+          break 
+        case 'heuristics':
+          this.panel.title = "Usability Heuristics"
           break 
         default:  
           console.error("Unrecognized Title")

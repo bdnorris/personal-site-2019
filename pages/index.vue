@@ -58,6 +58,14 @@
           </li>
         </ul>
       </section>
+      <section class="resume">
+        <h3>Résumé</h3>
+        <ul class="link-list">
+          <li>
+            <a href="">Download Résumé [PDF]</a>
+          </li>
+        </ul>
+      </section>
     </main>
     <!-- <Footer /> -->
     <Navigation

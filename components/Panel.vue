@@ -12,7 +12,7 @@
         {{ panelTitle }}
       </h2>
       <transition name="panel-contents">
-        <div v-if="panelSlug === 'balls'">
+        <div v-if="panelSlug === 'pugsley'">
           <p>"Because George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. "Nose out, Ron, or I'll burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
           <p>"George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
           <ul class="link-list">
@@ -23,6 +23,10 @@
               <a href="#">Project Page</a>
             </li>
           </ul>
+        </div>
+        <div v-if="panelSlug === 'heuristics'">
+          http://architectingusability.com/2012/06/28/donald-normans-design-principles-for-usability/
+          https://uploads.toptal.io/blog/image/123732/toptal-blog-image-1501712190014-f7387773306e657fd56f3d24b01c9ba2.png
         </div>
       </transition>
     </article>
@@ -96,33 +100,6 @@ export default {
   @include breakpoint(large) {
     position: relative;
     margin-top: 0.25em;
-  }
-}
-
-ul.link-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  & > li {
-    font-size: 1.375em;
-    font-weight: 600;
-    margin-bottom: 0.25em;
-    a {
-      color: $second;
-      text-decoration: none;
-      // border-bottom: 2px solid $second;
-      @include underline-transition($primary);
-      position: relative;
-      line-height: 1.2;
-      &::before {
-        content: '→';
-        display: inline-block;
-        font-family: "Lucida Grande", sans-serif;
-        position: absolute;
-        right: -1.25em;
-        top: 0.05em;
-      }
-    }
   }
 }
 

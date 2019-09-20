@@ -133,5 +133,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../assets/variables.scss';
+  @import '../../assets/mixins.scss';
 
+  svg {
+    g {
+      transition: fill 200ms ease;
+    }
+    &:hover {
+      g {
+        fill: $primary;
+      }
+    }
+  }
 </style>

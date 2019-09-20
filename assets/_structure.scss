@@ -3,7 +3,7 @@
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: flex-start;
-  height: 100vh;
+  height: calc(100vh - 12px);
 }
 
 .container {
@@ -20,7 +20,7 @@
     align-items: baseline;
   }
   // height: 25vh;
-  width: 100%;
+  // width: 100%;
   flex: 0 0 auto;
 }
 
@@ -29,7 +29,7 @@
   justify-content: space-between;
   align-items: flex-start;
   // height: 75vh;
-  width: 100%;
+  // width: 100%;
   flex: 1 1 70vh;
 
 }
@@ -58,16 +58,16 @@ main.container {
 
     @include breakpoint(large) {
       padding-right: 30%;
-      &:first-of-type {
-        margin-top: 2.75em;
-      }
+      // &:first-of-type {
+      //   margin-top: 2.75em;
+      // }
     }
   }
 }
 
-main.container--home {
-  padding-bottom: 6em;
-  @include breakpoint(large) {
-    padding-bottom: 2em;
-  }
-}
+// main.container--home {
+//   padding-bottom: 6em;
+//   @include breakpoint(large) {
+//     padding-bottom: 6em;
+//   }
+// }

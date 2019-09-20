@@ -25,7 +25,7 @@ export default {
 
 
 .top-decoration {
-  height: 18px;
+  height: 12px;
   width: 100%;
   background-color: $second;
 }
