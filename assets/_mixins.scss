@@ -193,7 +193,7 @@
   z-index: 2;
   &::after {
     content: '';
-    width: 100%;
+    width: auto;
     height: 3px;
     background-color: $color;
     display: block;

@@ -20,43 +20,49 @@
           type="button" 
           @click="loadPanel('pugsley')"
         >
-          Pugsley
+          <span>Pugsley</span>
         </button>
         <button 
           type="button" 
-          @click="loadPanel('scroll')"
+          @click="loadPanel('bookmarks')"
         >
-          Scroll Detection
+          <span>Bookmark </span><span>CRUD</span>
         </button>
         <button 
           type="button" 
           @click="loadPanel('haiku')"
         >
-          Haiku Generator
+          <span>Haiku </span><span>Generator</span>
         </button>
         <button 
           type="button" 
-          @click="loadPanel('grid')"
+          @click="loadPanel('diary')"
         >
-          Grid Experiments
+          <span>Dev </span><span>Diary</span>
         </button>
         <button 
           type="button" 
           @click="loadPanel('uilib')"
         >
-          UI Library
+          <span>UI </span><span>Library</span>
         </button>
         <button
           type="button"
           @click="loadPanel('heuristics')"
         >
-          Usability Heuristics
+          <span>Usability </span><span>Heuristics</span>
+        </button>
+        <button 
+          type="button" 
+          @click="loadPanel('scroll')"
+        >
+          <span>Scroll </span><span>Detection</span>
         </button>
         <button 
           type="button" 
           @click="loadPanel('colophon')"
         >
-          Colophon
+          <span>Colophon</span>
         </button>
       </nav>
       <transition name="panel">
