@@ -70,7 +70,7 @@ export default {
 
 .panel {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 4px);
   flex: 1 0 70%;
   background-color: $beige;
   padding: 1em 2.5em 2em 2em;

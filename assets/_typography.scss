@@ -29,7 +29,7 @@ h2 {
   line-height: 1;
   color: desaturate(darken($beige, 25%), 30%);
   .secondary-page & {
-    color: desaturate(darken($beige, 25%), 30%);
+    color: $second;
   }
   @include breakpoint(medium) {
     font-size: 2em;
@@ -67,6 +67,9 @@ ul.link-list {
       @include underline-transition($primary);
       position: relative;
       line-height: 1.2;
+      &::after {
+        bottom: 0;
+      }
       &::before {
         content: '→';
         display: inline-block;
