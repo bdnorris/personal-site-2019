@@ -17,7 +17,7 @@
           <p>"George wants to invite him to the ball," said Fred sarcastically. "Because we want to send a letter, you stupid great prat," said George. "Who d'you two keep writing to, eh?"  said Ron. <a href="#">"Nose out, Ron, or I'll</a> burn that for you too," said Fred, waving his wand threateningly. "So . . . you lot got dates for the ball yet?" </p>
           <ul class="link-list">
             <li>
-              <a href="#">Code Pen</a>
+              <a href="http://codepen.com">Code Pen</a>
             </li>
             <li>
               <a href="#">Project Page</a>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Icons from '~/components/Icons.vue'
+import Icons from '~/components/Icons/Icons.vue'
 
 export default {
   name: "Panel",
