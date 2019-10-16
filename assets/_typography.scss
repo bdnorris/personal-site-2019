@@ -71,12 +71,25 @@ ul.link-list {
         bottom: 0;
       }
       &::before {
-        content: '→';
+        content: '';
+        background-size: cover;
+        width: 16px;
+        height: 16px;
         display: inline-block;
         font-family: "Lucida Grande", sans-serif;
         position: absolute;
-        right: -1.25em;
-        top: 0.05em;
+        right: -1em;
+        top: 0.333em;
+      }
+    }
+    a[href^="http"] {
+      &::before {
+        background-image: svg-uri($external-link);
+      }
+    }
+    a[href$=".pdf"] {
+      &::before {
+        background-image: svg-uri($download-link);
       }
     }
   }
