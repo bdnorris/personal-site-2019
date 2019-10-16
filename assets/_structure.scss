@@ -9,6 +9,7 @@
 .container {
   position: relative;
   @include default-sizing(1024px);
+  // padding-bottom: 4em;
 }
 
 .banner {
@@ -65,9 +66,9 @@ main.container {
   }
 }
 
-// main.container--home {
-//   padding-bottom: 6em;
-//   @include breakpoint(large) {
-//     padding-bottom: 6em;
-//   }
-// }
+main.container--home {
+  padding-bottom: 6em;
+  @include breakpoint(large) {
+    padding-bottom: 4em;
+  }
+}
