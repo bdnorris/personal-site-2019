@@ -1,0 +1,92 @@
+nav {
+  flex: 0 1 30%;
+  order: 2;
+  font-size: 1.75em;
+}
+
+nav a {
+  font-family: freight-display-pro, serif;
+  color: $second;
+  text-decoration: none;
+  margin-left: 0.5em;
+  line-height: 1.2;
+  .secondary-page & {
+    color: $beige;
+  }
+}
+
+nav.projects {
+  flex: 1 1 auto;
+  order: 0;
+  padding-right: 1em;
+
+  @include breakpoint(large) {
+    flex: 0 1 30%;
+  }
+
+  button {
+    @include button-reset;
+    box-sizing: border-box;
+    display: block;
+    text-align: left;
+    // word-break: break-all;
+    // width: 100%;
+    color: $beige;
+    word-break: keep-all;
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 0.666em;
+    // display: flex;
+    // word-break: break-all;
+    word-break: break-word;
+    // transition: letter-spacing 200ms ease;
+    &:hover {
+      // letter-spacing: 1px;
+      span {
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+    span {
+      display: inline;
+      position: relative;
+      @include underline-transition($second);
+      // word-break: break-all;
+      // flex: 0 1 auto;
+      // background-color: pink;
+      // &::after {
+      //   bottom: 0;
+      // }
+    }
+  }
+}
+
+.header-navigation {
+  display: none;
+  @include breakpoint(large) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.footer-navigation {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  a {
+    background-color: $second;
+    color: white;
+    flex: 0 0 50%;
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+  }
+  @include breakpoint(large) {
+    display: none;
+  }
+}

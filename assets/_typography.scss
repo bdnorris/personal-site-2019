@@ -1,0 +1,96 @@
+h1, h2, h3, h4 {
+  font-family: freight-display-pro, serif;
+  margin: 0.2em 0 0.2em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+  .secondary-page & {
+    color: $beige;
+  }
+}
+
+h1 {
+  font-size: 20vw;
+  line-height: 0.8;
+  font-weight: 600;
+  @include breakpoint(medium) {
+    font-size: 5.5em;
+  }
+  @include breakpoint(large) {
+    font-size: 6.25em;
+  }
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 8vw;
+  line-height: 1;
+  color: desaturate(darken($beige, 25%), 30%);
+  .secondary-page & {
+    color: $second;
+  }
+  @include breakpoint(medium) {
+    font-size: 2em;
+  }
+  @include breakpoint(large) {
+    font-size: 2.3125em;
+  }
+}
+
+h3 {
+  font-size: 2em;
+  color: $primary;
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 1.4;
+  // &:first-of-type {
+  //   margin-top: 2.75em;
+  // }
+}
+
+ul.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  & > li {
+    font-size: 1.375em;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+    a {
+      color: $second;
+      text-decoration: none;
+      // border-bottom: 2px solid $second;
+      @include underline-transition($primary);
+      position: relative;
+      line-height: 1.2;
+      &::after {
+        bottom: 0;
+      }
+      &::before {
+        content: '';
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        font-family: "Lucida Grande", sans-serif;
+        position: absolute;
+        right: -1em;
+        top: 0.333em;
+      }
+    }
+    a[href^="http"] {
+      &::before {
+        background-image: svg-uri($external-link);
+      }
+    }
+    a[href$=".pdf"] {
+      &::before {
+        background-image: svg-uri($download-link);
+      }
+    }
+  }
+}
