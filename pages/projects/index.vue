@@ -24,7 +24,7 @@
         </button>
         <button 
           type="button" 
-          @click="loadPanel('bookmarks')"
+          @click="loadPanel('bookmark')"
         >
           <span>Bookmark </span><span>CRUD</span>
         </button>

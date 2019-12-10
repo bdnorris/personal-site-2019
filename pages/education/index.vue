@@ -28,6 +28,12 @@
         >
           <span>DES-340</span>
         </button>
+          <button 
+          type="button" 
+          @click="loadPanel('390')"
+        >
+          <span>MED-390</span>
+        </button>
       </nav>
       <transition name="panel">
         <Panel 
@@ -80,22 +86,13 @@ export default {
       this.panel.slug = slug
       switch(slug) {
         case 'pugsley':
-          this.panel.title = "Pugsley"
+          this.panel.title = "Web Design for Design Majors"
           break 
         case 'scroll':
-          this.panel.title = "Scroll Detection"
+          this.panel.title = "Advanced Web Design for Design Majors"
           break 
         case 'haiku':
-          this.panel.title = "Haiku Generator"
-          break 
-        case 'grid':
-          this.panel.title = "Grid Experiments"
-          break 
-        case 'uilib':
-          this.panel.title = "UI Library"
-          break 
-        case 'heuristics':
-          this.panel.title = "Usability Heuristics"
+          this.panel.title = "Interactive Web Design"
           break 
         default:  
           console.error("Unrecognized Title")
