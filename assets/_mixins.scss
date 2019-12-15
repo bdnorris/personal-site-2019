@@ -188,7 +188,7 @@
   }
 }
 
-@mixin underline-transition($color: $second) {
+@mixin underline-transition($color: $second, $bottom: -2px) {
   position: relative;
   z-index: 2;
   &::after {
@@ -198,7 +198,7 @@
     background-color: $color;
     display: block;
     position: absolute;
-    bottom: -2px;
+    bottom: $bottom;
     left: 0;
     right: 0;
     transition: transform 300ms ease;

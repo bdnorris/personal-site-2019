@@ -18,23 +18,34 @@
           <p>It also has an option to inject styles to the head of your HTML instead, making it good for developing landing pages that have to get pasted into a third party system.</p>
           <ul class="link-list">
             <li>
-              <a href="https://github.com/bdnorris/pugsley">View on GitHub</a>
+              <a
+                href="https://github.com/bdnorris/pugsley"
+                target="_blank"
+              >
+                View on GitHub
+              </a>
             </li>
             <li>
-              <a href="https://pugsley.netlify.com/">Project Page</a>
+              <a
+                href="https://pugsley.netlify.com/"
+                target="_blank"
+              >
+                Project Page
+              </a>
             </li>
           </ul>
-        </div>
-        <div v-if="panelSlug === 'heuristics'">
-          http://architectingusability.com/2012/06/28/donald-normans-design-principles-for-usability/
-          https://uploads.toptal.io/blog/image/123732/toptal-blog-image-1501712190014-f7387773306e657fd56f3d24b01c9ba2.png
         </div>
         <div v-if="panelSlug === 'bookmark'">
           <p>Another very much in progress project, I wanted to try and make my own CRUD app to help manage all of my bookmarks and links. Third party bookmark sites aren't really around anymore, and browser bookmark systems leave a lot to be desired.</p>
           <p>Specifically, how can I utilize different searching and filtering patterns in javascript to make it so I can find what I need when I need it?</p>
           <ul class="link-list">
             <li>
-              <a href="https://github.com/bdnorris/bookmark-crud">View on GitHub</a>
+              <a
+                href="https://github.com/bdnorris/bookmark-crud"
+                target="_blank"
+              >
+                View on GitHub
+              </a>
             </li>
           </ul>
         </div>
@@ -47,10 +58,20 @@
           </p>
           <ul class="link-list">
             <li>
-              <a href="https://github.com/bdnorris/haiku-meteor">View on GitHub</a>
+              <a
+                href="https://github.com/bdnorris/haiku-meteor"
+                target="_blank"
+              >
+                View on GitHub
+              </a>
             </li>
             <li>
-              <a href="https://haiku-jb.herokuapp.com/">Project Page</a>
+              <a
+                href="https://haiku-jb.herokuapp.com/"
+                target="_blank"
+              >
+                Project Page
+              </a>
             </li>
           </ul>
         </div>
@@ -58,7 +79,12 @@
           <p>Really just for my own use, but I'm sharing it out anyway, an exhaustive list of everything I do during my day job.</p>
           <ul class="link-list">
             <li>
-              <a href="https://dev-diary.netlify.com/">Project Page</a>
+              <a
+                href="https://dev-diary.netlify.com/"
+                target="_blank"
+              >
+                Project Page
+              </a>
             </li>
           </ul>
         </div>
@@ -71,31 +97,71 @@
           </p>
           <ul class="link-list">
             <li>
-              <a href="https://codepen.io/bdnorris/pen/wpdxJB">01: Tabs</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/wpdxJB"
+                target="_blank"
+              >
+                01: Tabs
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/GyOMbm">01: Modal</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/GyOMbm"
+                target="_blank"
+              >
+                01: Modal
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/VyQNqQ">03: Animated Navigation Indicator</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/VyQNqQ"
+                target="_blank"
+              >
+                03: Animated Navigation Indicator
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/JMgVKB">04: Scroll Progress Indicator</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/JMgVKB"
+                target="_blank"
+              >
+                04: Scroll Progress Indicator
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/WMbPbw">05: Animated Form Labels</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/WMbPbw"
+                target="_blank"
+              >
+                05: Animated Form Labels
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/pajdNp">06: Custom Checkboxes and Radio Buttons</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/pajdNp"
+                target="_blank"
+              >
+                06: Custom Checkboxes and Radio Buttons
+              </a>
             </li>
             <li>
-              <a href="https://codepen.io/bdnorris/pen/eVWNWy">07: Stateful Buttons</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/eVWNWy"
+                target="_blank"
+              >
+                07: Stateful Buttons
+              </a>
             </li>
             <!-- <li>
               <a href="https://codepen.io/bdnorris/pen/XZyjaO">08: Download Warning</a>
             </li> -->
             <li>
-              <a href="https://codepen.io/bdnorris/pen/KYjvEd">Getters and Setters JS Pattern for UI Control</a>
+              <a
+                href="https://codepen.io/bdnorris/pen/KYjvEd"
+                target="_blank"
+              >
+                Getters and Setters JS Pattern for UI Control
+              </a>
             </li>
           </ul>
         </div>
@@ -105,7 +171,12 @@
           </p>
           <ul class="link-list">
             <li>
-              <a href="https://www.notion.so/norrisstuff/UX-My-Heuristics-and-Scoring-3cec4e98092241a7aeb4ce6dd0382a56">Documentation</a>
+              <a 
+                href="https://www.notion.so/norrisstuff/UX-My-Heuristics-and-Scoring-3cec4e98092241a7aeb4ce6dd0382a56"
+                target="_blank"
+              >
+                Documentation
+              </a>
             </li>
           </ul>
         </div>
@@ -115,7 +186,12 @@
           <p>It’s is dependent on jQuery though. Since I wrote this, I've found <a href="https://github.com/terwanerik/ScrollTrigger">ScrollTriggers by Erik Terwan</a>. It solves the exact same problem with a lot more features and it's just vanilla Javascript.</p>
           <ul class="link-list">
             <li>
-              <a href="https://github.com/bdnorris/scroll-detection-script">View on GitHub</a>
+              <a
+                href="https://github.com/bdnorris/scroll-detection-script"
+                target="_blank"
+              >
+                View on GitHub
+              </a>
             </li>
           </ul>
         </div>
@@ -128,7 +204,12 @@
           <p>A course website was developed during in-class demos and used to store all course materials.</p>
           <ul class="link-list">
             <li>
-              <a href="http://msu.briannorris.io/">Course Website</a>
+              <a
+                href="http://msu.briannorris.io/"
+                target="_blank"
+              >
+                Course Website
+              </a>
             </li>
           </ul>
         </div>
@@ -137,7 +218,12 @@
           <p>All materials are available on the course website.</p>
           <ul class="link-list">
             <li>
-              <a href="http://msu.briannorris.io/">Course Website</a>
+              <a
+                href="http://msu.briannorris.io/"
+                target="_blank"
+              >
+                Course Website
+              </a>
             </li>
           </ul>
         </div>
@@ -146,7 +232,7 @@
           <p>Very much in progress...</p>
           <ul class="link-list">
             <li>
-              <a href="">Course Website</a>
+              <a href="http://msu.briannorris.io/">Course Website</a>
             </li>
           </ul>
         </div>
@@ -195,7 +281,7 @@ export default {
   height: calc(100% - 4px);
   flex: 1 0 70%;
   background-color: $beige;
-  padding: 1em 2.5em 2em 2em;
+  padding: 1em 2.5em 1em 2em;
   position: fixed;
   top: 0;
   right: 0;

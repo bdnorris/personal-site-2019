@@ -10,7 +10,7 @@
           Education
         </h1>
         <h2 class="subtitle">
-          Experiments and...
+          Course Materials
         </h2>
       </div>
     </header>
@@ -18,17 +18,17 @@
       <nav class="projects">
         <button 
           type="button" 
+          @click="loadPanel('340')"
+        >
+          <span>DES-340</span>
+        </button>
+        <button 
+          type="button" 
           @click="loadPanel('440')"
         >
           <span>DES-440</span>
         </button>
         <button 
-          type="button" 
-          @click="loadPanel('340')"
-        >
-          <span>DES-340</span>
-        </button>
-          <button 
           type="button" 
           @click="loadPanel('390')"
         >
@@ -85,13 +85,13 @@ export default {
     loadPanel: function (slug) {
       this.panel.slug = slug
       switch(slug) {
-        case 'pugsley':
+        case '340':
           this.panel.title = "Web Design for Design Majors"
           break 
-        case 'scroll':
+        case '440':
           this.panel.title = "Advanced Web Design for Design Majors"
           break 
-        case 'haiku':
+        case '390':
           this.panel.title = "Interactive Web Design"
           break 
         default:  

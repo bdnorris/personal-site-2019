@@ -10,7 +10,7 @@
           Projects
         </h1>
         <h2 class="subtitle">
-          Experiments and...
+          Experiments & Samples
         </h2>
       </div>
     </header>
@@ -121,17 +121,23 @@ export default {
         case 'scroll':
           this.panel.title = "Scroll Detection"
           break 
+        case 'bookmark':
+          this.panel.title = "Bookmark CRUD"
+          break 
         case 'haiku':
           this.panel.title = "Haiku Generator"
           break 
-        case 'grid':
-          this.panel.title = "Grid Experiments"
+        case 'diary':
+          this.panel.title = "Developer Diary"
           break 
         case 'uilib':
           this.panel.title = "UI Library"
           break 
         case 'heuristics':
           this.panel.title = "Usability Heuristics"
+          break 
+        case 'colophon':
+          this.panel.title = "Colophon"
           break 
         default:  
           console.error("Unrecognized Title")
