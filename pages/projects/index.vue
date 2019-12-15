@@ -82,8 +82,8 @@
 </template>
 
 <script>
-import Navigation from '~/components/Navigation.vue'
-import Panel from '~/components/Panel.vue'
+import Navigation from '~/components/Navigation'
+import Panel from '~/components/Panel'
 
 export default {
   components: {
