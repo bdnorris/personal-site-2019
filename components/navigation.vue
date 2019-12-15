@@ -48,12 +48,12 @@ export default {
 
 @include breakpoint(large) {
   a {
-    @include underline-transition($primary);
+    @include underline-transition($primary, -1px);
   }
   
   .secondary-page {
     a {
-      @include underline-transition($second);
+      @include underline-transition($second, -1px);
     }
   }
 }

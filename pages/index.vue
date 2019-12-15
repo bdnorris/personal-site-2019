@@ -10,7 +10,7 @@
           Brian Norris
         </h1>
         <h2 class="subtitle">
-          Web Designer/Developer
+          Web Developer/Designer
         </h2>
       </div>
     </header>
@@ -62,7 +62,12 @@
         <h3>Résumé</h3>
         <ul class="link-list">
           <li>
-            <a href="port.pdf">Download Résumé [PDF]</a>
+            <a
+              href="port.pdf"
+              target="_blank"
+            >
+              Download Résumé [PDF]
+            </a>
           </li>
         </ul>
       </section>

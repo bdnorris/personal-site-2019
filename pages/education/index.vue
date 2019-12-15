@@ -10,12 +10,18 @@
           Education
         </h1>
         <h2 class="subtitle">
-          Experiments and...
+          Course Materials
         </h2>
       </div>
     </header>
     <main class="container content">
       <nav class="projects">
+        <button 
+          type="button" 
+          @click="loadPanel('340')"
+        >
+          <span>DES-340</span>
+        </button>
         <button 
           type="button" 
           @click="loadPanel('440')"
@@ -24,9 +30,9 @@
         </button>
         <button 
           type="button" 
-          @click="loadPanel('340')"
+          @click="loadPanel('390')"
         >
-          <span>DES-340</span>
+          <span>MED-390</span>
         </button>
       </nav>
       <transition name="panel">
@@ -79,23 +85,14 @@ export default {
     loadPanel: function (slug) {
       this.panel.slug = slug
       switch(slug) {
-        case 'pugsley':
-          this.panel.title = "Pugsley"
+        case '340':
+          this.panel.title = "Web Design for Design Majors"
           break 
-        case 'scroll':
-          this.panel.title = "Scroll Detection"
+        case '440':
+          this.panel.title = "Advanced Web Design for Design Majors"
           break 
-        case 'haiku':
-          this.panel.title = "Haiku Generator"
-          break 
-        case 'grid':
-          this.panel.title = "Grid Experiments"
-          break 
-        case 'uilib':
-          this.panel.title = "UI Library"
-          break 
-        case 'heuristics':
-          this.panel.title = "Usability Heuristics"
+        case '390':
+          this.panel.title = "Interactive Web Design"
           break 
         default:  
           console.error("Unrecognized Title")
