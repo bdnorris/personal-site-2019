@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: "Brian Norris | Web Developer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -16,6 +16,9 @@ module.exports = {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "stylesheet", href: "https://use.typekit.net/aqk6rlp.css" }
+    ],
+    script: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=UA-29705114-1", async: true }
     ]
   },
 
@@ -32,7 +35,9 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/analytics.js', mode: 'client' }
+  ],
 
   /*
    ** Nuxt.js modules

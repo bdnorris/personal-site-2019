@@ -35,7 +35,7 @@ export default {
     }
   },
   created: function() {
-    console.log('current', this.current)
+    // console.log('current', this.current)
   }
 }
 </script>

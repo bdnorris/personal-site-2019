@@ -13,9 +13,9 @@
       </h2>
       <transition name="panel-contents">
         <div v-if="panelSlug === 'pugsley'">
-          <p>Very much *in progress* and *untested*, this is a little static site generator I put together to utilize my favorite tools with some opinionated Sass starter files.</p>
+          <p>Very much <em>in progress</em> and <em>untested</em>, this is a little static site generator I put together to utilize my favorite tools with some opinionated Sass starter files.</p>
           <p>It uses Pug or HTML, Sass, and a great little library called webpack-stream that allows Webpack style JS module compilation to be used with Gulp. Meant for little sites where you want some developer convenience but don't want to go with a full framework.</p>
-          <p>It also has an option to inject styles to the head of your HTML instead, making it good for developing landing pages that have to get pasted into a third party system.</p>
+          <p>It also has an option to inject styles to the head of your HTML instead, making it good for developing landing pages that have to get copy/pasted into a third party system.</p>
           <ul class="link-list">
             <li>
               <a
@@ -109,7 +109,7 @@
                 href="https://codepen.io/bdnorris/pen/GyOMbm"
                 target="_blank"
               >
-                01: Modal
+                02: Modal
               </a>
             </li>
             <li>
@@ -193,10 +193,18 @@
                 View on GitHub
               </a>
             </li>
+            <li>
+              <a
+                href="https://bdnorris.github.io/scroll-detection-script/"
+                target="_blank"
+              >
+                Demo Site
+              </a>
+            </li>
           </ul>
         </div>
         <div v-if="panelSlug === 'colophon'">
-          <p>This site is built with <a href="https://nuxtjs.org/guide#static-generated-pre-rendering-">Nuxt.js's static generation mode</a>.</p>
+          <p>This site is built with <a href="https://nuxtjs.org/guide#static-generated-pre-rendering-">Nuxt.js's static generation mode</a>. It's hosted on <a href="https://netlify.com">Netlify</a>.</p>
           <p>The typefaces are Freight Display and Freight Text Pro by Joshua Darden.</p>
         </div>
         <div v-if="panelSlug === '340'">
@@ -205,7 +213,7 @@
           <ul class="link-list">
             <li>
               <a
-                href="http://msu.briannorris.io/"
+                href="https://msu.briannorris.io/"
                 target="_blank"
               >
                 Course Website
@@ -219,7 +227,7 @@
           <ul class="link-list">
             <li>
               <a
-                href="http://msu.briannorris.io/"
+                href="https://msuadv.briannorris.io/"
                 target="_blank"
               >
                 Course Website
@@ -232,7 +240,7 @@
           <p>Very much in progress...</p>
           <ul class="link-list">
             <li>
-              <a href="http://msu.briannorris.io/">Course Website</a>
+              <a href="https://msuwebdesign.com">Course Website</a>
             </li>
           </ul>
         </div>
@@ -263,7 +271,7 @@ export default {
   },
   methods: {
     close() {
-      console.log('closed')
+      // console.log('closed')
       this.$emit('closed')
     }
   },

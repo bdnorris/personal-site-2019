@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     closePanel: function () {
-      console.log('close')
+      // console.log('close')
       this.panel.open = false
       this.panel.title = ''
       this.panel.slug = ''
