@@ -213,7 +213,7 @@
           <ul class="link-list">
             <li>
               <a
-                href="https://msu.briannorris.io/"
+                href="https://msuwebdesign.com"
                 target="_blank"
               >
                 Course Website
