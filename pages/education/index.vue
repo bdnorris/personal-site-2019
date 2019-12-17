@@ -28,12 +28,12 @@
         >
           <span>DES-440</span>
         </button>
-        <button 
+        <!-- <button 
           type="button" 
           @click="loadPanel('390')"
         >
           <span>MED-390</span>
-        </button>
+        </button> -->
       </nav>
       <transition name="panel">
         <Panel 
