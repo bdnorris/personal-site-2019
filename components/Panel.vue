@@ -3,6 +3,7 @@
     <button
       type="button"
       class="close-button"
+      aria-label="close dialog"
       @click="close"
     >
       <Icons icon="close" />
@@ -213,7 +214,7 @@
           <ul class="link-list">
             <li>
               <a
-                href="https://msuwebdesign.com"
+                href="https://msu.briannorris.io"
                 target="_blank"
               >
                 Course Website
@@ -223,8 +224,8 @@
         </div>
         <div v-if="panelSlug === '440'">
           <p>Designed as a continuation of DES-330, this course offers more in-depth project work, focusing on contemporary processes and workflow.</p>
-          <p>All materials are available on the course website.</p>
-          <ul class="link-list">
+          <p><span class="strike">All materials are available on the course website.</span> Course website is no longer available.</p>
+          <!-- <ul class="link-list">
             <li>
               <a
                 href="https://msuadv.briannorris.io/"
@@ -233,14 +234,26 @@
                 Course Website
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
-        <div v-if="panelSlug === '390'">
+        <!-- <div v-if="panelSlug === '390'">
           <p>Similar to my course for Graphic Design Majors, this course is designed for Media and Journalism majors. Much less coding, a little more strategy.</p>
           <p>Very much in progress...</p>
           <ul class="link-list">
             <li>
               <a href="https://msuwebdesign.com">Course Website</a>
+            </li>
+          </ul>
+        </div> -->
+        <div v-if="panelSlug === 'guide'">
+          <p>This project is a combination of various materials I've put together over the last few years. It features tips for digital designers of various experience levels, as well as more in-depth introductions of digital design concepts. The intention is to smooth the transition from design to development. </p>
+          <p>Very much, <strong>still</strong>, in progress...</p>
+          <ul class="link-list">
+            <li>
+              <a href="https://epic-carson-676001.netlify.app/">Project Website</a>
+            </li>
+            <li>
+              <a href="https://github.com/bdnorris/design-to-dev-guide-checklist-2020">View on Github</a>
             </li>
           </ul>
         </div>

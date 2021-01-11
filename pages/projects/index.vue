@@ -22,18 +22,18 @@
         >
           <span>Pugsley</span>
         </button>
-        <button 
+        <!-- <button 
           type="button" 
           @click="loadPanel('bookmark')"
         >
           <span>Bookmark </span><span>CRUD</span>
-        </button>
-        <button 
+        </button> -->
+        <!-- <button 
           type="button" 
           @click="loadPanel('haiku')"
         >
           <span>Haiku </span><span>Generator</span>
-        </button>
+        </button> -->
         <button 
           type="button" 
           @click="loadPanel('diary')"
@@ -51,6 +51,12 @@
           @click="loadPanel('heuristics')"
         >
           <span>Usability </span><span>Heuristics</span>
+        </button>
+        <button
+          type="button"
+          @click="loadPanel('guide')"
+        >
+          <span>Design </span><span>to </span><span>Developer </span><span>Guide</span>
         </button>
         <button 
           type="button" 
@@ -121,17 +127,20 @@ export default {
         case 'scroll':
           this.panel.title = "Scroll Detection"
           break 
-        case 'bookmark':
-          this.panel.title = "Bookmark CRUD"
-          break 
-        case 'haiku':
-          this.panel.title = "Haiku Generator"
-          break 
+        // case 'bookmark':
+        //   this.panel.title = "Bookmark CRUD"
+        //   break 
+        // case 'haiku':
+        //   this.panel.title = "Haiku Generator"
+        //   break 
         case 'diary':
           this.panel.title = "Developer Diary"
           break 
         case 'uilib':
           this.panel.title = "UI Library"
+          break 
+        case 'guide':
+          this.panel.title = "Design to Developer Guide"
           break 
         case 'heuristics':
           this.panel.title = "Usability Heuristics"
