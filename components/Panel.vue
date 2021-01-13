@@ -181,6 +181,21 @@
             </li>
           </ul>
         </div>
+        <div v-if="panelSlug === 'accessibility'">
+          <p>
+            As a part of a company driven effort to increase our knowledge of web accessibility, I researched and put together this training for other developers. It features high-level overviews of what it means to make your project accessible. It also calls out some of the trickiest problems and some practical solutions and resources. 
+          </p>
+          <ul class="link-list">
+            <li>
+              <a 
+                href="https://www.notion.so/norrisstuff/Accessibility-Dev-Training-cd9df00bca6144ee924cf0677d7dbf22"
+                target="_blank"
+              >
+                Documentation
+              </a>
+            </li>
+          </ul>
+        </div>
         <div v-if="panelSlug === 'scroll'">
           <p>While working on the idea for the first student project in DES-440, it occurred to me that a very popular affect on the web is animating items as they come into the viewport, and it was likely I would be asked how this was done.</p>
           <p>A popular library for this is <a href="https://wowjs.uk/">Wow.js</a>. But I thought it would be useful and educational to attempt to write my own. I ended up working with it a bit and letting students use it on their projects.</p>
