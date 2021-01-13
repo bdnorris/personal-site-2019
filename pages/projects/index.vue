@@ -56,7 +56,13 @@
           type="button"
           @click="loadPanel('guide')"
         >
-          <span>Design </span><span>to </span><span>Developer </span><span>Guide</span>
+          <span>Design </span><span>to </span><span>Dev </span><span>Guide</span>
+        </button>
+        <button
+          type="button"
+          @click="loadPanel('accessibility')"
+        >
+          <span>Accessibility </span><span>Developer </span><span>Training</span>
         </button>
         <button 
           type="button" 
@@ -130,9 +136,9 @@ export default {
         // case 'bookmark':
         //   this.panel.title = "Bookmark CRUD"
         //   break 
-        // case 'haiku':
-        //   this.panel.title = "Haiku Generator"
-        //   break 
+        case 'accessibility':
+          this.panel.title = "Accessibility Dev Training"
+          break 
         case 'diary':
           this.panel.title = "Developer Diary"
           break 
