@@ -16,7 +16,7 @@
     </header>
     <main class="container container--home">
       <p>
-        Hi, I’m Brian Norris. I have 17 years experience working for advertising and media agencies as a graphic designer and web developer. I’m currently a Web Developer at The Marlin Network in Southwest Missouri. <!--and instruct Web Design courses at Missouri State University.-->
+        Hi, I’m Brian Norris. I have 18 years of experience working for advertising and media agencies as a graphic designer and web developer. I’m currently a Sr. Web Developer at The Marlin Network in Southwest Missouri.
       </p>
       <p>
         I work with graphic designers, engineers, copywriters and user experience designers to deliver functional user experiences on the web. Find me through the various channels below, or take a look at some of my educational resources or my extra-curricular projects.
