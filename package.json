@@ -22,7 +22,7 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
+    "eslint": "^7.18.0",
     "eslint-config-standard": ">=14.1.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": ">=2.18.2",
