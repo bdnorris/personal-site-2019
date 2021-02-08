@@ -17,7 +17,7 @@
     "cross-env": "^7.0.3",
     "node-sass": "^5.0.0",
     "nuxt": "^2.10.2",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^11.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
@@ -33,6 +33,6 @@
     "eslint-plugin-vue": "^7.4.1",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.1",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^11.0.0"
   }
 }
