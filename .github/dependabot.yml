@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@nuxtjs/eslint-config"
+    versions:
+    - 5.0.0
+  - dependency-name: sass-loader
+    versions:
+    - 11.0.0
+    - 11.0.1
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
