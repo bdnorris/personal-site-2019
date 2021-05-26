@@ -265,10 +265,10 @@
           <p>Very much, <strong>still</strong>, in progress...</p>
           <ul class="link-list">
             <li>
-              <a href="https://epic-carson-676001.netlify.app/">Project Website</a>
+              <a href="https://design-to-dev.netlify.app/">Project Website</a>
             </li>
             <li>
-              <a href="https://github.com/bdnorris/design-to-dev-guide-checklist-2020">View on Github</a>
+              <a href="https://github.com/bdnorris/design-to-dev-guide">View on Github</a>
             </li>
           </ul>
         </div>
