@@ -18,9 +18,9 @@
       <nav class="projects">
         <button 
           type="button" 
-          @click="loadPanel('pugsley')"
+          @click="loadPanel('library')"
         >
-          <span>Pugsley</span>
+          <span>UI Library Starter</span>
         </button>
         <!-- <button 
           type="button" 
@@ -44,7 +44,7 @@
           type="button" 
           @click="loadPanel('uilib')"
         >
-          <span>UI </span><span>Library</span>
+          <span>Codpen UI </span><span>Library</span>
         </button>
         <button
           type="button"
@@ -127,8 +127,8 @@ export default {
     loadPanel: function (slug) {
       this.panel.slug = slug
       switch(slug) {
-        case 'pugsley':
-          this.panel.title = "Pugsley"
+        case 'library':
+          this.panel.title = "UI Library Starter"
           break 
         case 'scroll':
           this.panel.title = "Scroll Detection"
@@ -143,7 +143,7 @@ export default {
           this.panel.title = "Developer Diary"
           break 
         case 'uilib':
-          this.panel.title = "UI Library"
+          this.panel.title = "Codepen UI Library"
           break 
         case 'guide':
           this.panel.title = "Design to Developer Guide"

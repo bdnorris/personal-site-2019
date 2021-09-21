@@ -13,14 +13,12 @@
         {{ panelTitle }}
       </h2>
       <transition name="panel-contents">
-        <div v-if="panelSlug === 'pugsley'">
-          <p>Very much <em>in progress</em> and <em>untested</em>, this is a little static site generator I put together to utilize my favorite tools with some opinionated Sass starter files.</p>
-          <p>It uses Pug or HTML, Sass, and a great little library called webpack-stream that allows Webpack style JS module compilation to be used with Gulp. Meant for little sites where you want some developer convenience but don't want to go with a full framework.</p>
-          <p>It also has an option to inject styles to the head of your HTML instead, making it good for developing landing pages that have to get copy/pasted into a third party system.</p>
+        <div v-if="panelSlug === 'library'">
+          <p>Based on ideas from <a href="https://fbrctr.github.io/" target="_blank">Fabricator</a> but not quite as fancy, I made a little static site generator that allows you to build up and display atomic components and pages. Useful if you're trying to build a little design system for a site or a set of sites, or if you just need to get started on front-end dev before the backend is ready. The CSS and JS files it generates are completely separate from the code that runs the dev environment so you can easily reference them on another platform.</p>
           <ul class="link-list">
             <li>
               <a
-                href="https://github.com/bdnorris/pugsley"
+                href="https://github.com/bdnorris/ui-library-starter"
                 target="_blank"
               >
                 View on GitHub
@@ -28,7 +26,7 @@
             </li>
             <li>
               <a
-                href="https://pugsley.netlify.com/"
+                href="https://ui-lib-starter.netlify.app/"
                 target="_blank"
               >
                 Project Page
